@@ -1,0 +1,44 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  email           :string           not null
+#  password_digest :string           not null
+#  full_name       :string           not null
+#  address         :string
+#  city            :string
+#  country         :string
+#  role            :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+admin:
+  email: admin@test.com
+  password_digest: "<%= BCrypt::Password.create('123456') %>"
+  full_name: admin
+  address: test
+  city: test
+  country: test
+  role: admin
+
+employee:
+  email: employee@test.com
+  password_digest: "<%= BCrypt::Password.create('123456') %>"
+  full_name: employee
+  address: test
+  city: test
+  country: test
+  role: employee
+
+another_employee:
+  email: employee2@test.com
+  password_digest: "<%= BCrypt::Password.create('123456') %>"
+  full_name: employee
+  address: test
+  city: test
+  country: test
+  role: employee
